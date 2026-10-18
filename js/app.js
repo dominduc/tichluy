@@ -303,7 +303,7 @@
     return heading(
       "01",
       "Tiền của bạn, rõ ràng hơn.",
-      "_______________________________________________________________"
+      "________________________________"
     ) + `
       <section class="balance">
         <small>CÓ THỂ CHI TRONG THÁNG</small>
@@ -581,7 +581,7 @@
     return heading(
       "03",
       "Thu chi trong tháng",
-      "_________________________________________________"
+      "__________________________________"
     ) + `
       <div class="stats-grid">
         <div class="stat">
