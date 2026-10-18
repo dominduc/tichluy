@@ -42,7 +42,7 @@ window.Money = (() => {
 
     if (!/^[+-]?\d+(\.\d+)?$/.test(s)) {
       throw Error(
-        "Nhập số tiền hợp lệ, ví dụ 100000, 100k hoặc 1,5tr."
+        "Nhập số tiền hợp lệ, ví dụ 100."
       );
     }
 
@@ -55,7 +55,7 @@ window.Money = (() => {
       !validAmount(Math.abs(n))
     ) {
       throw Error(
-        "Số tiền phải là số nguyên, tối đa 1.000 tỷ đồng."
+        "Số tiền phải là số nguyên."
       );
     }
 

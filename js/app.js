@@ -266,7 +266,7 @@
                 maxlength="80"
                 required
                 placeholder="${
-                  saving ? "Ví dụ: Mua điện thoại" : "Ví dụ: Ăn uống"
+                  saving ? "Nhập khoản chi tiêu" : "Nhập khoản chi tiêu"
                 }"
               >
             </label>
@@ -276,7 +276,7 @@
               <input
                 name="target"
                 inputmode="decimal"
-                placeholder="${saving ? "10tr" : "2tr"}"
+                placeholder="${saving ? "Nhập số tiền" : "Nhập số tiền"}"
               >
             </label>
 
@@ -303,7 +303,7 @@
     return heading(
       "01",
       "Tiền của bạn, rõ ràng hơn.",
-      "Một nơi nhỏ để sắp xếp tháng này và dành dụm cho mai sau."
+      "_______________________________________________________________"
     ) + `
       <section class="balance">
         <small>CÓ THỂ CHI TRONG THÁNG</small>
@@ -334,11 +334,11 @@
         <form data-form="base">
           <div class="row">
             <label>
-              Tiền được cho / làm ra tháng này
+              Tổng số tiền tháng này
               <input
                 name="amount"
                 inputmode="decimal"
-                placeholder="Ví dụ: 5tr"
+                placeholder="nhập số tiền"
                 value="${data.months[month] || ""}"
                 required
               >
@@ -346,23 +346,12 @@
             <button>Lưu số tiền</button>
           </div>
         </form>
-
-        <p class="hint">
-          Đây là số tiền ban đầu. Thu nhập phát sinh ghi ở Nhập nhanh.
-          Sửa ô này sẽ thay thế số tiền đầu tháng.
-        </p>
       </section>
 
       <div class="grid">
         ${categoryCard("expense", s)}
         ${categoryCard("saving", s)}
       </div>
-
-      <p class="hint">
-        Tiền có thể chi tính riêng từng tháng, không tự chuyển dư tháng trước.
-        Khoản tiết kiệm giữ số dư qua các tháng.
-        Danh mục và ngân sách tháng dùng chung giữa các tháng.
-      </p>
     `;
   }
 
@@ -591,8 +580,8 @@
 
     return heading(
       "03",
-      "Nhìn lại để đi xa hơn.",
-      "Thu chi trong tháng, tiết kiệm qua thời gian."
+      "Thu chi trong tháng",
+      "_________________________________________________"
     ) + `
       <div class="stats-grid">
         <div class="stat">
@@ -667,21 +656,10 @@
             `
             : ""
         }
-
-        <p class="hint">
-          Dấu +/− phản ánh thao tác với mục đã chọn:
-          + tiết kiệm là nạp, − là rút.
-          Nạp/rút tiết kiệm không tính vào tổng thu/chi.
-        </p>
       </section>
 
       <section class="card">
         <h2>Dữ liệu của bạn</h2>
-
-        <p class="hint">
-          Lưu riêng trên trình duyệt này.
-          Xuất sao lưu định kỳ; xóa dữ liệu trình duyệt sẽ mất dữ liệu web.
-        </p>
 
         <div class="settings" style="margin-top:16px">
           <button data-export>↓ Xuất sao lưu</button>
